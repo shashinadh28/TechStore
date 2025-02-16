@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es6", // ✅ Change "es5" to "es6" for better compatibility
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true,
+    "esModuleInterop": true, 
+    "allowSyntheticDefaultImports": true, // ✅ Fix default import issues (e.g., cmdk)
+    "module": "esnext",
+    "moduleResolution": "node", // ✅ Change from "bundler" to "node" for stability
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "incremental": true,
+    "plugins": [{ "name": "next" }],
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "types": ["node", "d3-array"]
+  },
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "exclude": ["node_modules"]
+}
